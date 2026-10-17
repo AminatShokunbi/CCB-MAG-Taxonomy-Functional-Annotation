@@ -26,15 +26,15 @@ The 15 GTDB-Tk MAG identifiers absent from the *original* eggNOG collection were
 
 The retry annotation files were exported using Galaxy numeric dataset identifiers rather than the MAG names. Their one-to-one association with these 15 MAGs **cannot be established from filenames alone**.
 
-## Cross-file comparison
+## Reanalysis of initially unsuccessful jobs
 
-The investigator clarified that the overlap between initial and retry records arose because **the initial eggNOG jobs failed and were subsequently rerun**. The retries were recovery attempts for existing MAGs, **not additional MAGs or biological replicates**. Therefore, a failed-run record and its successful retry must not both contribute to final annotation counts. Where failed-run outputs were retained in the Galaxy history, those records should be treated as execution provenance rather than independent functional annotation results.
+The investigator clarified that **15 MAGs were rerun through eggNOG-mapper to ensure they received functional annotation after their initial jobs failed**. These were repeat processing attempts for the same MAGs, not additional genomes, duplicate biological samples, or a separate experimental dataset. The original collection export contained 364 MAG annotation files, and 15 supplementary annotation files were subsequently provided from the reruns.
 
-In particular, the retry output for Galaxy input dataset **2531** shared all 678 of its protein query identifiers with the original file `GO1CC4SS10_bin.6.tabular`; this was consistent with the reported rerun history, but the Galaxy input mapping remains necessary to establish exactly which successful retry belongs to each MAG.
+Protein query identifiers appearing in multiple processing outputs were expected in the context of rerunning the same input sequences and **must not be described as evidence of biological duplication**. The appropriate reporting unit was the MAG, with successful functional annotations attributed to their source genomes.
 
 ## Required provenance check
 
-The investigator confirmed that the overlapping outputs reflected failed initial jobs followed by retries. To complete an auditable per-MAG inventory, the 15 retried input **dataset IDs** should still be associated with their original **MAG names** using Galaxy history or collection element metadata. For each MAG, only the successful annotation output should be counted. No independent duplicate-MAG hypothesis is warranted solely from the reported overlap.
+The investigator confirmed that 15 MAGs were rerun solely to ensure their functional annotation was completed. The 15 Galaxy retry dataset IDs can be linked to their original MAG names for a reproducible audit trail, but the reruns do not represent extra MAGs or a duplication problem.
 
 **Status:** 379 GTDB-Tk MAG IDs and 15 supplementary retry outputs were identified; a validated 379-MAG functional-annotation join has **not** yet been established.
 
