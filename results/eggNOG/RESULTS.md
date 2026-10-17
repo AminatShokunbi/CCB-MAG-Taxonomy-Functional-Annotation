@@ -41,10 +41,18 @@ A direct count of data rows across all 364 tabular files identified **626,123 pr
 
 The annotation results indicated substantial predicted functional diversity among the analyzed MAGs. Pfam domain assignments and COG-category annotations were more broadly represented than KEGG KO, pathway, or module assignments. These differences reflected annotation coverage across reference systems; they did not establish differential biological activity. KEGG pathway annotations represented associations of individual proteins with pathway entries, **not evidence that complete pathways were present**.
 
-The GTDB-Tk classification summaries contained **379 MAG entries**, whereas the eggNOG archive contained **364 MAG-level files**. The remaining 15 genomes were not represented in this export, and the reason for this difference was not established. Joint taxonomy–function analyses must use reconciled MAG identifiers.
+The GTDB-Tk classification summaries contained **379 MAG entries**, whereas the initial eggNOG collection export contained **364 MAG-level files**. The user clarified that **15 initial eggNOG jobs failed and were retried separately**. Thus, these 15 MAGs were not absent from the overall analysis; they were not included in the initial 364-file export. Ten retry annotation files and ten corresponding seed-ortholog files were subsequently supplied. The remaining retry outputs and exact original MAG identifiers still require reconciliation before a definitive combined total can be reported.
 
 The findings were computational predictions. No claim of measured gene expression, enzymatic activity, or confirmed metabolism was made.
 
 ## Data availability
 
 The complete Prodigal and eggNOG outputs were retained outside the Git repository because of their size. Public access links and checksums may be added later **subject to authorization from the CCB dataset owners**. This document reports aggregate results derived from the supplied eggNOG export; it is not a substitute for the complete raw annotation files.
+
+## Separate eggNOG retries (supplementary outputs)
+
+The investigator reported that 15 initial eggNOG jobs had failed and were rerun. Ten supplementary eggNOG annotation tables and their ten seed-ortholog tables were provided separately, labeled in Galaxy with dataset identifiers 1351, 1471, 2255, 2267, 2343, 2675, 2647, 2611, 2531 and 2503. These Galaxy dataset identifiers must not be assumed to be MAG IDs.
+
+The ten supplementary annotation tables contained **19,895** protein records, of which **18,744** had descriptions, **11,415** had KEGG KO assignments, **18,188** had Pfam assignments, **5,759** had EC numbers, **6,552** had KEGG pathway annotations, **4,270** had KEGG module annotations, **1,435** had GO annotations, and **254** had CAZy assignments. These were counted independently from the initial collection export; totals were not merged because MAG identity, potential overlap, and the status of the other five retries had not yet been verified.
+
+The 364-file archive represented the **initial export**, not the full set of completed or attempted eggNOG analyses.
