@@ -1,0 +1,7 @@
+cff-version: 1.2.0
+message: "Please cite this repository when using the documented workflow."
+title: "CCB MAG Taxonomy and Functional Annotation Using Galaxy"
+authors:
+  - family-names: Shokunbi
+    given-names: Aminat Olamide
+repository-code: "https://github.com/AminatShokunbi/CCB-MAG-Taxonomy-Functional-Annotation"
