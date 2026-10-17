@@ -56,3 +56,7 @@ The investigator reported that 15 initial eggNOG jobs had failed and were rerun.
 The 15 supplementary annotation tables contained **28,294** protein records, of which **26,675** had descriptions, **16,272** had KEGG KO assignments, **25,893** had Pfam assignments, **8,428** had EC numbers, **9,505** had KEGG pathway annotations, **6,134** had KEGG module annotations, **2,027** had GO annotations, and **407** had CAZy assignments. These were counted independently from the initial collection export; totals were not merged because MAG identity, potential overlap, and one-to-one mapping to the original 379 MAGs had not yet been verified.
 
 The 364-file archive represented the **initial export**, not the full set of completed or attempted eggNOG analyses.
+
+## MAG-level reconciliation audit
+
+The exact 15 GTDB-Tk MAG identifiers absent from the initial collection were enumerated in [RETRY_RECONCILIATION.md](RETRY_RECONCILIATION.md). A protein-query comparison revealed overlapping identifiers between some retry files and original files. Since the retries were named using Galaxy dataset IDs, their one-to-one MAG identities still required confirmation from Galaxy history provenance. Aggregate annotation counts for original and retry exports were therefore **not combined**.
