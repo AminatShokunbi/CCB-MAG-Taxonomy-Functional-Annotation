@@ -1,7 +1,17 @@
 cff-version: 1.2.0
-message: "Please cite this repository when using the documented workflow."
+message: "If you use or adapt this Galaxy workflow and its documentation, please cite this repository. A version-specific DOI will be added after a GitHub-triggered Zenodo archive is verified."
+type: software
 title: "CCB MAG Taxonomy and Functional Annotation Using Galaxy"
 authors:
   - family-names: Shokunbi
     given-names: Aminat Olamide
 repository-code: "https://github.com/AminatShokunbi/CCB-MAG-Taxonomy-Functional-Annotation"
+license: MIT
+keywords:
+  - metagenomics
+  - MAG
+  - Galaxy
+  - GTDB-Tk
+  - Prodigal
+  - eggNOG-mapper
+  - reproducibility
