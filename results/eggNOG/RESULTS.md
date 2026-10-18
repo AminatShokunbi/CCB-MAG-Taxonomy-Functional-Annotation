@@ -41,7 +41,7 @@ A direct count of data rows across all 364 tabular files identified **626,123 pr
 
 The annotation results indicated substantial predicted functional diversity among the analyzed MAGs. Pfam domain assignments and COG-category annotations were more broadly represented than KEGG KO, pathway, or module assignments. These differences reflected annotation coverage across reference systems; they did not establish differential biological activity. KEGG pathway annotations represented associations of individual proteins with pathway entries, **not evidence that complete pathways were present**.
 
-The GTDB-Tk classification summaries contained **379 MAG entries**, whereas the initial eggNOG collection export contained **364 MAG-level files**. The user clarified that **15 initial eggNOG jobs failed and were retried separately**. Thus, these 15 MAGs were not absent from the overall analysis; they were not included in the initial 364-file export. All 15 retry annotation files and their corresponding 15 seed-ortholog files were subsequently supplied. The exact original MAG identifiers and possible overlap with the first export still require reconciliation before a definitive nonduplicated combined total can be reported.
+The GTDB-Tk classification summaries contained **379 MAG entries**, whereas the initial eggNOG collection export contained **364 MAG-level files**. The user clarified that **15 initial eggNOG jobs failed and were retried separately**. Thus, these 15 MAGs were not absent from the overall analysis; they were not included in the initial 364-file export. All 15 retry annotation files and their corresponding 15 seed-ortholog files were subsequently supplied. The investigator supplied the exact MAG identities for all 15 Galaxy retry datasets; their union with the original 364 MAGs matched all 379 GTDB-Tk MAG IDs.
 
 The findings were computational predictions. No claim of measured gene expression, enzymatic activity, or confirmed metabolism was made.
 
@@ -53,10 +53,14 @@ The complete Prodigal and eggNOG outputs were retained outside the Git repositor
 
 The investigator reported that 15 initial eggNOG jobs had failed and were rerun. Fifteen supplementary eggNOG annotation tables and their 15 seed-ortholog tables were provided separately, labeled in Galaxy with dataset identifiers 1351, 1471, 2255, 2267, 2343, 2675, 2647, 2611, 2531, 2503, 2415, 2339, 1415, 1347 and 1195. These Galaxy dataset identifiers must not be assumed to be MAG IDs.
 
-The 15 supplementary annotation tables contained **28,294** protein records, of which **26,675** had descriptions, **16,272** had KEGG KO assignments, **25,893** had Pfam assignments, **8,428** had EC numbers, **9,505** had KEGG pathway annotations, **6,134** had KEGG module annotations, **2,027** had GO annotations, and **407** had CAZy assignments. These were counted independently from the initial collection export; totals were not merged because MAG identity, potential overlap, and one-to-one mapping to the original 379 MAGs had not yet been verified.
+The 15 supplementary annotation tables contained **28,294** protein records, of which **26,675** had descriptions, **16,272** had KEGG KO assignments, **25,893** had Pfam assignments, **8,428** had EC numbers, **9,505** had KEGG pathway annotations, **6,134** had KEGG module annotations, **2,027** had GO annotations, and **407** had CAZy assignments. These records were combined with the original 364-MAG collection only after the investigator provided the Galaxy input-to-MAG mapping and the resulting 379-MAG inventory was checked against GTDB-Tk.
 
 The 364-file archive represented the **initial export**, not the full set of completed or attempted eggNOG analyses.
 
 ## MAG-level reconciliation audit
 
-The exact 15 GTDB-Tk MAG identifiers absent from the initial collection were enumerated in [RETRY_RECONCILIATION.md](RETRY_RECONCILIATION.md). A protein-query comparison revealed overlapping identifiers between some retry files and original files. Since the retries were named using Galaxy dataset IDs, their one-to-one MAG identities still required confirmation from Galaxy history provenance. Aggregate annotation counts for original and retry exports were therefore **not combined**.
+The exact 15 GTDB-Tk MAG identifiers absent from the initial collection were enumerated in [RETRY_RECONCILIATION.md](RETRY_RECONCILIATION.md). The investigator supplied the 15 Galaxy input-to-MAG mappings. The union of the original 364 MAG names and 15 rerun MAG names exactly matched the 379 GTDB-Tk MAG names, with zero overlapping MAG identifiers.
+
+## Verified final MAG inventory
+
+The investigator supplied a complete mapping of the 15 Galaxy rerun input dataset IDs to MAG identifiers. All 15 identifiers were absent from the original 364-file export, and their union matched the 379 GTDB-Tk MAG identifiers exactly. The combined exports contained **654,417 protein annotation records**. The complete mapping and combined annotation-field statistics are available in [RETRY_RECONCILIATION.md](RETRY_RECONCILIATION.md). The 364-file statistics above describe only the initial collection, not the final 379-MAG dataset.
