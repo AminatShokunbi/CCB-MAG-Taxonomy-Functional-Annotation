@@ -16,7 +16,7 @@ CCB MAGs → CheckM2 quality screening (separate Galaxy history)
 
 ## Results from supplied outputs
 
-GTDB-Tk summaries contained **379 classified MAG entries** (268 bacterial and 111 archaeal). The eggNOG-mapper export contained **364 MAG-level files** and **626,123 protein annotation records**. Of these, **590,024** had populated descriptions, **370,563** had KEGG KO assignments, **574,349** had Pfam assignments, and **189,928** had EC numbers. Fifteen initial eggNOG jobs had failed and were retried separately; therefore, they were not missing MAGs. All 15 retry annotation tables have now been examined (28,294 protein records); the original MAG identifiers and possible overlap must be reconciled before reporting a nonduplicated combined total.
+GTDB-Tk summaries contained **379 classified MAG entries** (268 bacterial and 111 archaeal). The eggNOG-mapper export contained **364 MAG-level files** and **626,123 protein annotation records**. Of these, **590,024** had populated descriptions, **370,563** had KEGG KO assignments, **574,349** had Pfam assignments, and **189,928** had EC numbers. Fifteen initial eggNOG jobs failed and were successfully rerun. The investigator mapped each Galaxy retry dataset to its original MAG identifier. **The 364 original eggNOG MAGs plus the 15 rerun MAGs exactly matched all 379 GTDB-Tk MAG identifiers, without overlap or omissions.** The combined 379-MAG annotation files contained **654,417 protein records**, including **386,835 KEGG KO assignments**. See [verified reconciliation](results/eggNOG/RETRY_RECONCILIATION.md).
 
 See [eggNOG results](results/eggNOG/RESULTS.md) for detailed annotation coverage and sample-level counts, [Prodigal documentation](results/Prodigal/README.md), and [methods](docs/METHODS.md).
 
